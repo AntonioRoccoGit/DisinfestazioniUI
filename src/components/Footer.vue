@@ -46,10 +46,10 @@
                     <ul className="list-unstyled small mb-0">
                         <li>
                             <a
-                                href="mailto:robert@gmail.com"
+                                href="mailto:alpharange@example.com"
                                 className="text-light text-decoration-none"
                             >
-                                vincenzobar95@gmail.com
+                                alpharange@example.com
                             </a>
                         </li>
                         <li className="mt-1">Robert: <a

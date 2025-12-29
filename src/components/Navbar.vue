@@ -37,3 +37,9 @@
         </div>
     </nav>
 </template>
+
+<style>
+nav {
+    height: 10rem;
+}
+</style>
