@@ -2,6 +2,7 @@
 import { defineProps, nextTick } from 'vue'
 import { ref, onMounted, onBeforeUnmount } from 'vue'
 import { Carousel } from 'bootstrap'
+import BottoneChiamata from './atomi/BottoneChiamata.vue'
 
 const props = defineProps({
     items: {
@@ -81,25 +82,13 @@ onBeforeUnmount(() => {
                         backgroundPosition: 'center'
                     }"
                 >
-                    <div
-                        v-if="overlay"
-                        class="position-absolute top-0 start-0 w-100 h-100"
-                        :style="{ backgroundColor: overlayColor, zIndex: 1 }"
-                    ></div>
-
-                    <div
-                        class="container position-relative text-center"
-                        style="z-index: 2;"
-                    >
-                        <component
-                            :is="item.component"
-                            v-bind="item.props"
-                        />
-                    </div>
 
                 </div>
+
             </div>
         </div>
+
+        <bottone-chiamata class="bottone-chiamata" />
 
         <!-- Controlli -->
         <button
@@ -130,6 +119,10 @@ onBeforeUnmount(() => {
     </div>
 </template>
 <style scoped>
+#jumboCarousel {
+    position: relative;
+}
+
 .carousel-item .zoom-bg {
     transition: transform 7s ease-in-out;
     transform: scale(1);

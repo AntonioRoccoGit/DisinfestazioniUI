@@ -1,5 +1,6 @@
 <template>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-success sticky-top shadow-sm border-bottom"> -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
         <div class="container">
             <a
                 class="navbar-brand"
@@ -38,8 +39,11 @@
     </nav>
 </template>
 
-<style>
-nav {
-    height: 10rem;
+<style scoped>
+.navbar {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    background-color: rgba(25, 135, 84, 0.95);
+    backdrop-filter: blur(6px);
 }
 </style>
