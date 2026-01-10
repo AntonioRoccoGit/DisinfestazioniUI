@@ -1,3 +1,6 @@
+<script setup>
+import logo from '@/assets/logoMini.svg'
+</script>
 <template>
     <footer class="bg-dark text-white py-5 mt-5">
         <div class="container">
@@ -6,11 +9,11 @@
                 <!-- Sezione 1: Logo + Social -->
                 <div class="col-lg-4 mb-4 mb-lg-0 section-with-line">
                     <img
-                        src=""
+                        :src=logo
                         alt="Logo"
-                        style="width: 120px;"
+                        style="width: 150px;"
                         class="mb-3"
-                    />
+                    ></img>
 
                     <div class="d-flex justify-content-center justify-content-lg-start gap-3 mt-3">
                         <a

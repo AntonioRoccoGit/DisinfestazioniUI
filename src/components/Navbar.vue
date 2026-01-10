@@ -1,11 +1,21 @@
+<script setup>
+import logo from '@/assets/logo.svg'
+</script>
+
 <template>
-    <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-success sticky-top shadow-sm border-bottom"> -->
-    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
-        <div class="container">
-            <a
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container-fluid w-75 py-3">
+            <router-link
                 class="navbar-brand"
-                href="#"
-            >Il Mio Sito</a>
+                style="height: 6rem;"
+                to="/"
+            >
+                <img
+                    :src="logo"
+                    alt="Logo"
+                    class="img-fluid h-100"
+                >
+            </router-link>
 
             <button
                 class="navbar-toggler"
@@ -21,18 +31,30 @@
                 id="mainNavbar"
             >
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a
-                            class="nav-link"
-                            href="#"
-                        >Home</a></li>
-                    <li class="nav-item"><a
-                            class="nav-link"
-                            href="#"
-                        >Servizi</a></li>
-                    <li class="nav-item"><a
-                            class="nav-link"
-                            href="#"
-                        >Contatti</a></li>
+                    <li class="nav-item color-success">
+                        <router-link
+                            class="nav-link fs-5"
+                            to="#"
+                        >
+                            Home
+                        </router-link>
+                    </li>
+                    <li class="nav-item">
+                        <router-link
+                            class="nav-link fs-5"
+                            to="#"
+                        >
+                            Servizi
+                        </router-link>
+                    </li>
+                    <li class="nav-item">
+                        <router-link
+                            class="nav-link fs-5"
+                            to="#"
+                        >
+                            Contatti
+                        </router-link>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -41,9 +63,8 @@
 
 <style scoped>
 .navbar {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    background-color: rgba(25, 135, 84, 0.95);
+    background-color: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(6px);
+    border-bottom: 2px solid rgba(25, 135, 84, 0.95);
 }
 </style>
