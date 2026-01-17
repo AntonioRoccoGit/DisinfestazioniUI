@@ -11,6 +11,6 @@ export const home5050CardImgs = [
         image: new URL("@/assets/carosello2.jpg", import.meta.url).href,
         reverse: true,
         description:
-            "Se hai bisogno di ammazzare delle btrutte bestiacce eccoci qui"
+            "Se hai bisogno di ammazzare delle btrutte bestiacce eccoci qui lorem "
     }
 ];

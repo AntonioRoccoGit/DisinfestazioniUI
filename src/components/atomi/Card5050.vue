@@ -1,20 +1,24 @@
+<script setup>
+const props = defineProps({
+    title: { type: String, required: true },
+    description: { type: String, required: true },
+    image: { type: String, required: true },
+})
+</script>
 <template>
-    <section class="card5050 bg-success bg-gradient text-white rounded-4 shadow-sm p-4 p-md-5 mb-5">
-        <div
-            class="row align-items-center"
-            :class="{ 'flex-md-row-reverse': reverse }"
-        >
+    <section class="bg-success bg-gradient text-white rounded-3 pt-3 px-4 mb-5 h-100">
+        <div class="d-flex flex-column h-100">
             <!-- Immagine -->
-            <div class="col-md-6 mb-4 mb-md-0">
+            <div class="card-image-wrapper mb-4">
                 <img
                     :src="image"
-                    class="img-fluid rounded-3 shadow"
+                    class="card-image"
                     :alt="title"
                 />
             </div>
 
             <!-- Testo -->
-            <div class="col-md-6">
+            <div class="">
                 <h2 class="fw-bold mb-3">
                     {{ title }}
                 </h2>
@@ -26,12 +30,22 @@
     </section>
 </template>
 
+<style scoped>
+.card-image-wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    /* 16:9, cambia se vuoi */
+    overflow: hidden;
+    border-radius: 1rem;
+}
 
-<script setup>
-const props = defineProps({
-    title: { type: String, required: true },
-    description: { type: String, required: true },
-    image: { type: String, required: true },
-    reverse: { type: Boolean, default: false }   // immagine a destra
-})
-</script>
+.card-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+</style>

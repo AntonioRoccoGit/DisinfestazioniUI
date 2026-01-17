@@ -2,7 +2,7 @@
     <section class="container py-5">
         <div class="row justify-content-center">
             <div class="col-lg-9">
-                <div class="p-4 p-lg-5 bg-light rounded-4 shadow-sm">
+                <div class="p-4 p-lg-5">
 
                     <h2 class="fw-bold text-center mb-4">
                         Disinfestazione e controllo degli infestanti

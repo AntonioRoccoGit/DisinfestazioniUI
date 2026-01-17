@@ -1,5 +1,5 @@
 <script setup>
-import logo from '@/assets/logoMini.svg'
+import logo from '@/assets/logoMini.png'
 </script>
 <template>
     <footer class="bg-dark text-white py-5 mt-5">
@@ -21,17 +21,10 @@ import logo from '@/assets/logoMini.svg'
                             class="text-white fs-4"
                         ><i class="bi bi-facebook"></i></a>
                         <a
-                            href="#"
+                            href="https://www.instagram.com/alpha_range_/"
+                            target="_blank"
                             class="text-white fs-4"
                         ><i class="bi bi-instagram"></i></a>
-                        <a
-                            href="#"
-                            class="text-white fs-4"
-                        ><i class="bi bi-twitter"></i></a>
-                        <a
-                            href="#"
-                            class="text-white fs-4"
-                        ><i class="bi bi-linkedin"></i></a>
                     </div>
                 </div>
 
