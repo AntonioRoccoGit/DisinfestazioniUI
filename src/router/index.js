@@ -8,10 +8,12 @@ const router = createRouter({
         {
             path: "/",
             name: "Home",
-            component: Home,
-            meta: {
-                navbarTransparent: true
-            }
+            component: Home
+        }, {
+
+            path: "/disinfestazione",
+            name: "Disintestazione",
+            component: Home
         }
     ],
 })

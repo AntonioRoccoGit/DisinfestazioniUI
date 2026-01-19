@@ -1,31 +1,27 @@
 <script setup>
-import Card5050 from '@/components/atomi/Card5050.vue';
 import Jumbo from '@/components/Jumbo.vue';
 import { jumboItems } from '@/data/home/jumboItems'
-import { home5050CardImgs } from '@/data/home/home5050Card';
+import { serviceItems } from '@/data/home/serviceItems';
 import Presentation from '@/components/Presentation.vue';
+import CardCarousel from '@/components/atomi/CardCarousel.vue';
 
 </script>
 
 <template>
-    <Jumbo :items="jumboItems"></Jumbo>
+    <Jumbo :items="jumboItems" />
     <section>
-        <Presentation></Presentation>
+        <Presentation />
     </section>
     <section class="py-5">
-        <div class="container">
-
-            <Card5050
-                v-for="(card, i) in home5050CardImgs"
-                :key="i"
-                :title="card.title"
-                :image="card.image"
-                :description="card.description"
-                :reverse="card.reverse"
-            />
-
+        <div class="container-fluid w-75">
+            <CardCarousel :items="serviceItems" />
         </div>
     </section>
 </template>
 
-<style scoped></style>
+<style scoped>
+.scrollspy-example {
+    height: 300px;
+    overflow-y: auto;
+}
+</style>

@@ -34,26 +34,63 @@ import logo from '@/assets/logo.png'
                     <li class="nav-item color-success">
                         <router-link
                             class="nav-link fs-5"
-                            to="#"
+                            to="/"
                         >
                             Home
                         </router-link>
                     </li>
-                    <li class="nav-item">
-                        <router-link
-                            class="nav-link fs-5"
-                            to="#"
+                    <li class="nav-item dropdown">
+                        <a
+                            class="nav-link dropdown-toggle fs-5"
+                            href="#"
+                            id="serviziDropdown"
+                            role="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
                         >
                             Servizi
-                        </router-link>
-                    </li>
-                    <li class="nav-item">
-                        <router-link
-                            class="nav-link fs-5"
-                            to="#"
+                        </a>
+
+                        <ul
+                            class="dropdown-menu"
+                            aria-labelledby="serviziDropdown"
                         >
-                            Contatti
-                        </router-link>
+                            <li>
+                                <router-link
+                                    class="dropdown-item"
+                                    to="/disinfestazione"
+                                >
+                                    Disinfestazione
+                                </router-link>
+                            </li>
+                            <!-- <li>
+                                <router-link
+                                    class="dropdown-item"
+                                    to="/derattizzazione"
+                                >
+                                    Derattizzazione
+                                </router-link>
+                            </li>
+                            <li>
+                                <router-link
+                                    class="dropdown-item"
+                                    to="/sanificazione"
+                                >
+                                    Sanificazione ambienti
+                                </router-link>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <router-link
+                                    class="dropdown-item"
+                                    to="/consulenza"
+                                >
+                                    Consulenza e prevenzione
+                                </router-link>
+                            </li> -->
+                        </ul>
                     </li>
                 </ul>
             </div>
