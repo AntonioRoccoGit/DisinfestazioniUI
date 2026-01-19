@@ -1,7 +1,7 @@
 <template>
     <section class="container py-5">
         <div class="row justify-content-center">
-            <div class="col-lg-9">
+            <div class="col-lg-10">
                 <div class="p-4 p-lg-5">
 
                     <h2 class="fw-bold text-center mb-4">
@@ -9,27 +9,45 @@
                     </h2>
 
                     <p class="fs-5">
-                        Da anni ci occupiamo di disinfestazione e controllo degli infestanti, offrendo
-                        soluzioni professionali per ambienti domestici, condomìni, strutture ricettive
-                        e attività commerciali. Il nostro metodo di lavoro si basa su analisi preventiva,
-                        individuazione delle cause dell’infestazione e applicazione di trattamenti mirati,
-                        riducendo al minimo l’impatto sugli ambienti e sulle persone.
+                        Da molti anni ci occupiamo con serietà e passione di disinfestazione e controllo
+                        degli infestanti, offrendo soluzioni efficaci e su misura per abitazioni private,
+                        condomìni, uffici, strutture ricettive e attività commerciali di ogni tipo.
+                        Interveniamo su problematiche comuni come insetti striscianti e volanti,
+                        roditori, blatte, formiche, zanzare, vespe e altri infestanti che possono
+                        compromettere il comfort, l’igiene e la sicurezza degli ambienti.
                     </p>
 
                     <p class="fs-5">
-                        Operiamo nel pieno rispetto delle normative vigenti e utilizziamo prodotti
-                        certificati, selezionati per garantire efficacia e sicurezza. Ogni intervento
-                        viene pianificato con attenzione, valutando caratteristiche degli spazi,
-                        tipologia di infestante e livello di criticità, così da ottenere risultati
-                        duraturi nel tempo.
+                        Il nostro approccio è semplice ma rigoroso: partiamo sempre da un’analisi
+                        accurata della situazione, individuiamo le cause reali dell’infestazione
+                        e progettiamo un intervento mirato, evitando soluzioni standard che spesso
+                        risolvono il problema solo temporaneamente. Questo ci permette di agire
+                        in modo preciso, riducendo al minimo l’impatto sugli spazi e sulle persone
+                        che li vivono ogni giorno.
+                    </p>
+
+                    <p class="fs-5">
+                        Operiamo nel pieno rispetto delle normative vigenti e utilizziamo esclusivamente
+                        prodotti certificati, selezionati per garantire un equilibrio ottimale tra
+                        efficacia e sicurezza. Ogni trattamento viene pianificato con attenzione,
+                        tenendo conto delle caratteristiche dell’ambiente, della tipologia
+                        dell’infestante e del livello di criticità, così da ottenere risultati
+                        concreti e duraturi nel tempo.
+                    </p>
+
+                    <p class="fs-5">
+                        Crediamo fortemente che la prevenzione sia parte integrante di un buon
+                        intervento. Per questo, oltre all’azione operativa, forniamo sempre indicazioni
+                        pratiche e consigli utili per evitare il ripresentarsi del problema:
+                        dalla corretta gestione degli spazi alla pulizia mirata, fino a piccoli
+                        accorgimenti quotidiani che fanno davvero la differenza.
                     </p>
 
                     <p class="fs-5 mb-0">
-                        Crediamo nella prevenzione e nella cura degli ambienti: per questo affianchiamo
-                        ai trattamenti operativi anche indicazioni e buone pratiche utili a evitare il
-                        ripresentarsi del problema. Professionalità, riservatezza e puntualità
-                        rappresentano i principi che guidano ogni nostro intervento, offrendo un
-                        supporto affidabile nella gestione degli infestanti.
+                        Professionalità, riservatezza e puntualità sono i valori che guidano ogni
+                        nostro intervento. Il nostro obiettivo non è solo eliminare l’infestante,
+                        ma restituire ambienti sani, sicuri e vivibili, offrendo un supporto affidabile
+                        e continuo nella gestione di ogni situazione.
                     </p>
 
                 </div>
@@ -39,13 +57,11 @@
 </template>
 
 <script setup>
-// Non è necessaria logica. Componente puramente informativo.
 </script>
 
 <style scoped>
-/* Margine visivo netto tra jumbo e card */
 section {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
 }
 </style>
