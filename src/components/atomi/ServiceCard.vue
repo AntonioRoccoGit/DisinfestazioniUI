@@ -1,66 +1,47 @@
 <script setup>
-const props = defineProps({
-    title: { type: String, required: true },
-    description: { type: String, required: true },
-    image: { type: String, required: true },
-})
+import { serviceItems } from '@/data/serviceItems';
 </script>
 <template>
-    <div class="my-card">
-        <img
-            :src="image"
-            :alt="title"
-        />
+    <div class="container my-5">
+        <div class="row g-4">
+            <div
+                class="col-12 col-md-6 col-lg-4"
+                v-for="card in serviceItems"
+                :key="card.id"
+            >
+                <div class="card h-100 shadow-sm service-card">
+                    <div class="card-body d-flex flex-column">
 
-        <div class="card-body">
-            <h5 class="card-title">{{ title }}</h5>
-            <p class="card-text">
-                {{ description }}
-            </p>
+                        <div class="mb-3 fs-2 text-primary">
+                            <i :class="card.icon"></i>
+                        </div>
+
+                        <h5 class="card-title">{{ card.title }}</h5>
+                        <p class="card-text flex-grow-1">
+                            {{ card.description }}
+                        </p>
+
+                        <router-link
+                            :to="card.link"
+                            class="btn btn-outline-primary mt-auto align-self-start"
+                        >
+                            Scopri di più
+                        </router-link>
+
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </template>
 
 <style scoped>
-.my-card {
-    height: 100%;
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-    background: #fff;
-    display: flex;
-    flex-direction: column;
+.service-card {
+    transition: transform .2s ease, box-shadow .2s ease;
 }
 
-.my-card img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    display: block;
-}
-
-.my-card .card-body {
-    padding: 1rem 1.25rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
-.my-card .card-title {
-    font-size: 1.1rem;
-    font-weight: 600;
-    line-height: 1.3;
-    margin: 0;
-    word-break: break-word;
-    overflow-wrap: break-word;
-}
-
-.my-card {
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.my-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.12);
+.service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, .15);
 }
 </style>
