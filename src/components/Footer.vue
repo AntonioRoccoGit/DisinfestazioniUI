@@ -1,6 +1,8 @@
-<script setup>
-import logo from '@/assets/logoMini.png'
+<script setup lang="ts">
+import FooterLogo from './atomi/FooterLogo.vue';
+
 </script>
+
 <template>
     <footer class="bg-dark text-white py-5 mt-5">
         <div class="container">
@@ -8,14 +10,12 @@ import logo from '@/assets/logoMini.png'
 
                 <!-- Sezione 1: Logo + Social -->
                 <div class="col-lg-4 mb-4 mb-lg-0 section-with-line">
-                    <img
-                        :src=logo
+                    <FooterLogo
                         alt="Logo"
-                        style="width: 150px;"
-                        class="mb-3"
-                    ></img>
-
-                    <div class="d-flex justify-content-center justify-content-lg-start gap-3 mt-3">
+                        style="width: 75%;"
+                        class="mb-3 m-auto"
+                    ></FooterLogo>
+                    <div class="d-flex justify-content-center justify-content-lg-even gap-3 mt-3">
                         <a
                             href="#"
                             class="text-white fs-4"
