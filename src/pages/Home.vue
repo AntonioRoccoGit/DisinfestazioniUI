@@ -11,7 +11,11 @@ import ServiceCard from '@/components/atomi/ServiceCard.vue';
     <section>
         <Presentation />
     </section>
-    <section class="py-5">
+
+    <section
+        id="servizi"
+        class="py-5"
+    >
         <div class="container-fluid w-75">
             <ServiceCard></ServiceCard>
         </div>
