@@ -1,4 +1,4 @@
-export const home5050CardImgs = [
+export const serviceItems = [
     {
         title: "Derattizzazione",
         image: new URL("@/assets/carosello1.png", import.meta.url).href,
