@@ -1,5 +1,6 @@
 <script setup>
 import logo from '@/assets/logo.png'
+import { services } from '@/data/services';
 </script>
 
 <template>
@@ -55,41 +56,15 @@ import logo from '@/assets/logo.png'
                             class="dropdown-menu"
                             aria-labelledby="serviziDropdown"
                         >
-                            <li>
+                            <li v-for="item in services">
                                 <router-link
                                     class="dropdown-item"
-                                    to="/disinfestazione"
+                                    :to="`/servizi/${item.slug}`"
                                 >
-                                    Disinfestazione
+                                    {{ item.label }}
                                 </router-link>
                             </li>
-                            <!-- <li>
-                                <router-link
-                                    class="dropdown-item"
-                                    to="/derattizzazione"
-                                >
-                                    Derattizzazione
-                                </router-link>
-                            </li>
-                            <li>
-                                <router-link
-                                    class="dropdown-item"
-                                    to="/sanificazione"
-                                >
-                                    Sanificazione ambienti
-                                </router-link>
-                            </li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li>
-                                <router-link
-                                    class="dropdown-item"
-                                    to="/consulenza"
-                                >
-                                    Consulenza e prevenzione
-                                </router-link>
-                            </li> -->
+
                         </ul>
                     </li>
                 </ul>

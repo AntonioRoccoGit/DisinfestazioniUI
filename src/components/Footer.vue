@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import FooterLogo from './atomi/FooterLogo.vue';
-
+import { personalInfo } from '@/data/personalInfo';
 </script>
 
 <template>
@@ -31,9 +31,11 @@ import FooterLogo from './atomi/FooterLogo.vue';
                 <!-- Sezione 2: Dove siamo -->
                 <div class="col-lg-4 mb-4 mb-lg-0 section-with-line">
                     <h5 class="fw-bold mb-3">Dove Siamo</h5>
-                    <p class="mb-1">Via Roma 123</p>
-                    <p class="mb-1">00100 - Roma (RM)</p>
-                    <p class="mb-1">Italia</p>
+                    <p class="mb-1">{{ personalInfo.coumune }}, {{ personalInfo.indirizzo }}</p>
+                    <p class="mb-1">
+                        {{ personalInfo.cap }} - {{ personalInfo.provincia }}({{ personalInfo.siglaProvincia }})
+                    </p>
+                    <p class="mb-1">{{ personalInfo.nazione }}</p>
                 </div>
 
                 <!-- Sezione 3: Contatti -->
@@ -43,15 +45,20 @@ import FooterLogo from './atomi/FooterLogo.vue';
                         <li>
                             <a
                                 href="mailto:alpharange@example.com"
+                                target="_blank"
                                 className="text-light text-decoration-none"
                             >
-                                alpharange@example.com
+                                {{ personalInfo.email }}
                             </a>
                         </li>
-                        <li className="mt-1">Robert: <a
-                                href="tel:+393333333333"
+                        <li className="mt-1">Robert:
+                            <a
+                                target="_blank"
+                                :href="`tel:+39${personalInfo.cellulare}`"
                                 className="text-light text-decoration-none"
-                            >333 333 3333</a></li>
+                            >{{ personalInfo.cellulare }}
+                            </a>
+                        </li>
                     </ul>
                 </div>
 
