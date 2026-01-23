@@ -40,57 +40,98 @@ watch(
 </script>
 
 <template>
-    <div
-        v-if="service"
-        class="container my-5"
-    >
+    <div v-if="service">
 
-        <!-- Breadcrumb -->
-        <nav
-            aria-label="breadcrumb"
-            class="mb-4"
+        <!-- HERO con background -->
+        <section
+            class="service-hero d-flex align-items-center"
+            :style="{
+                backgroundImage: `url(${service.heroImage})`
+            }"
         >
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item">
-                    <router-link to="/">Home</router-link>
-                </li>
-                <li class="breadcrumb-item">
-                    <router-link to="/#servizi">
-                        Servizi
-                    </router-link>
-                </li>
-                <li class="breadcrumb-item active">
-                    {{ service.label }}
-                </li>
-            </ol>
-        </nav>
+            <div class="overlay"></div>
 
-        <!-- Hero -->
-        <div class="row align-items-center mb-5">
-            <div class="col-md-6">
-                <h1 class="mb-3">{{ service.title }}</h1>
-                <p class="lead">{{ service.description }}</p>
-            </div>
-            <div class="col-md-6">
-                <img
-                    :src="service.heroImage"
-                    :alt="service.label"
-                    class="img-fluid rounded"
-                />
-            </div>
-        </div>
+            <div class="container position-relative">
+                <div class="row">
+                    <div class="col-lg-8 text-white">
 
-        <!-- Contenuto -->
-        <div class="row">
-            <div class="col-lg-8">
-                <div v-html="service.content"></div>
-            </div>
+                        <h1 class="display-5 fw-bold mb-3">
+                            {{ service.title }}
+                        </h1>
 
-            <!-- Sidebar -->
-            <div class="col-lg-4">
-                <BottoneChiamata></BottoneChiamata>
+                        <p class="lead mb-4">
+                            {{ service.description }}
+                        </p>
+
+                        <BottoneChiamata />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTENUTO -->
+        <div class="container my-5">
+
+            <!-- Breadcrumb -->
+            <nav
+                aria-label="breadcrumb"
+                class="mb-4"
+            >
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <router-link to="/">Home</router-link>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <router-link to="/#servizi">Servizi</router-link>
+                    </li>
+                    <li class="breadcrumb-item active">
+                        {{ service.label }}
+                    </li>
+                </ol>
+            </nav>
+
+            <div class="row">
+
+                <!-- Testo principale -->
+                <div class="col-lg-8">
+                    <div
+                        class="service-content"
+                        v-html="service.content"
+                    ></div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="col-lg-4">
+                    <BottoneChiamata />
+                </div>
+
             </div>
         </div>
 
     </div>
 </template>
+<style>
+.service-hero {
+    min-height: 60vh;
+    background-size: cover;
+    background-position: center 20%;
+    position: relative;
+}
+
+.service-hero .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+.service-hero h1,
+.service-hero p {
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.service-content p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+</style>

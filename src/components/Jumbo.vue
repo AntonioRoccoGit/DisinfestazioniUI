@@ -79,7 +79,7 @@ onBeforeUnmount(() => {
                         minHeight: height,
                         backgroundImage: item.bgImage ? `url(${item.bgImage})` : 'none',
                         backgroundSize: 'cover',
-                        backgroundPosition: 'center'
+                        backgroundPosition: 'center 20%'
                     }"
                 >
 

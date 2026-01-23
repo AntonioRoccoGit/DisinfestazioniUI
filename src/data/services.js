@@ -1,28 +1,31 @@
+import disinfestazione from '@/assets/servizi/disinfestazioni.png'
+import derattizzazione from '@/assets/servizi/derattizzazioni.png'
+
 export const services = [
     {
         slug: 'disinfestazione-insetti',
         label: 'Disinfestazione Insetti',
-        title: 'Disinfestazione Insetti a Roma',
-        description: 'Interventi professionali contro blatte, zanzare, formiche, pulci e cimici.',
-        metaTitle: 'Disinfestazione Insetti a Roma | Nome Azienda',
-        metaDescription: 'Servizio di disinfestazione insetti per abitazioni e aziende. Interventi rapidi e certificati.',
-        heroImage: '/img/services/insetti.jpg',
+        title: 'Disinfestazione Insetti',
+        description: 'Eliminazione efficace di blatte, zanzare, formiche, pulci e cimici da abitazioni e aziende.',
+        heroImage: disinfestazione,
+        metaTitle: 'Disinfestazione Insetti | Alpha Range',
+        metaDescription: 'Servizi professionali di disinfestazione insetti per abitazioni e aziende.',
         content: `
-      <p>Offriamo interventi mirati per l'eliminazione di insetti infestanti...</p>
-      <h2>Quando è necessario intervenire</h2>
-      <p>La presenza di blatte o cimici può compromettere...</p>
+      <h3>Interventi mirati e sicuri</h3>
+      <p>Testo...</p>
+      <p>Altro testo...</p>
     `
     },
     {
         slug: 'derattizzazione',
         label: 'Derattizzazione',
-        title: 'Derattizzazione Professionale a Roma',
-        description: 'Controllo e rimozione di topi e ratti in ambienti civili e industriali.',
-        metaTitle: 'Derattizzazione a Roma | Nome Azienda',
-        metaDescription: 'Servizio di derattizzazione certificato per aziende e privati.',
-        heroImage: '/img/services/topi.jpg',
+        title: 'Derattizzazione professionale',
+        description: 'Controllo e eliminazione roditori.',
+        heroImage: derattizzazione,
+        metaTitle: 'Derattizzazione | Alpha Range',
+        metaDescription: 'Servizio professionale di derattizzazione.',
         content: `
-      <p>La derattizzazione è fondamentale per la sicurezza sanitaria...</p>
+      <p>Contenuto HTML derattizzazione...</p>
     `
     },
     {
