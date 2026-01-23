@@ -1,9 +1,8 @@
 <script setup>
 import Jumbo from '@/components/Jumbo.vue';
-import { jumboItems } from '@/data/home/jumboItems'
-import { serviceItems } from '@/data/home/serviceItems';
+import { jumboItems } from '@/data/jumboItems'
 import Presentation from '@/components/Presentation.vue';
-import CardCarousel from '@/components/atomi/CardCarousel.vue';
+import ServiceCard from '@/components/atomi/ServiceCard.vue';
 
 </script>
 
@@ -14,7 +13,7 @@ import CardCarousel from '@/components/atomi/CardCarousel.vue';
     </section>
     <section class="py-5">
         <div class="container-fluid w-75">
-            <CardCarousel :items="serviceItems" />
+            <ServiceCard></ServiceCard>
         </div>
     </section>
 </template>
