@@ -1,5 +1,6 @@
 import disinfestazione from '@/assets/servizi/disinfestazioni.png'
-import derattizzazione from '@/assets/servizi/derattizzazioni.png'
+import derattizzazioneImg from '@/assets/servizi/derattizzazioni.png'
+import Derattizzazione from '@/components/serviceviews/ServiceDerattizzazion.vue'
 
 export const services = [
     {
@@ -10,18 +11,14 @@ export const services = [
         heroImage: disinfestazione,
         metaTitle: 'Disinfestazione Insetti | Alpha Range',
         metaDescription: 'Servizi professionali di disinfestazione insetti per abitazioni e aziende.',
-        content: `
-      <h3>Interventi mirati e sicuri</h3>
-      <p>Testo...</p>
-      <p>Altro testo...</p>
-    `
+        component: Derattizzazione
     },
     {
         slug: 'derattizzazione',
         label: 'Derattizzazione',
         title: 'Derattizzazione professionale',
         description: 'Controllo e eliminazione roditori.',
-        heroImage: derattizzazione,
+        heroImage: derattizzazioneImg,
         metaTitle: 'Derattizzazione | Alpha Range',
         metaDescription: 'Servizio professionale di derattizzazione.',
         content: `

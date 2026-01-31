@@ -63,7 +63,6 @@ watch(
                             {{ service.description }}
                         </p>
 
-                        <BottoneChiamata />
                     </div>
                 </div>
             </div>
@@ -94,11 +93,9 @@ watch(
 
                 <!-- Testo principale -->
                 <div class="col-lg-8">
-                    <div
-                        class="service-content"
-                        v-html="service.content"
-                    ></div>
+                    <component :is="service.component" />
                 </div>
+
 
                 <!-- Sidebar -->
                 <div class="col-lg-4">
