@@ -1,5 +1,5 @@
-import disinfestazione from '@/assets/servizi/disinfestazioni.png'
-import derattizzazioneImg from '@/assets/servizi/derattizzazioni.png'
+import disinfestazione from '@/assets/servizi/disinfestazioni.webp'
+import derattizzazioneImg from '@/assets/servizi/derattizzazioni.webp'
 import ServiceDerattizzazione from '@/components/serviceviews/ServiceDerattizzazione.vue'
 import ServiceDisinfestazione from '@/components/serviceviews/ServiceDisinfestazione.vue'
 import ServiceVolatili from '@/components/serviceviews/ServiceVolatili.vue'

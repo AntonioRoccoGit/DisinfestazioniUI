@@ -1,5 +1,6 @@
 <script setup>
 import { ref, watch, onMounted } from 'vue'
+import { useHead } from '@vueuse/head'
 import { useRoute, useRouter } from 'vue-router'
 import { services } from '@/data/services'
 import BottoneChiamata from '@/components/atomi/BottoneChiamata.vue'
@@ -19,16 +20,22 @@ function loadService() {
     }
 
     service.value = found
-    updateMeta(found)
+    updateHead(found)
 }
 
-function updateMeta(s) {
-    document.title = s.metaTitle
-
-    const meta = document.querySelector('meta[name="description"]')
-    if (meta) {
-        meta.setAttribute('content', s.metaDescription)
-    }
+function updateHead(s) {
+    useHead({
+        title: s.metaTitle,
+        meta: [
+            { name: 'description', content: s.metaDescription },
+            { property: 'og:title', content: s.metaTitle },
+            { property: 'og:description', content: s.metaDescription }
+        ],
+        link: [
+            { rel: 'preload', as: 'image', href: s.heroImage },
+            { rel: 'canonical', href: `https://www.alpharange.it/servizi/${s.slug}` }
+        ]
+    })
 }
 
 onMounted(loadService)
@@ -43,14 +50,15 @@ watch(
     <div v-if="service">
 
         <!-- HERO con background -->
-        <section
-            class="service-hero d-flex align-items-center"
-            :style="{
-                backgroundImage: `url(${service.heroImage})`
-            }"
-        >
-            <div class="overlay"></div>
-
+        <section class="service-hero position-relative d-flex align-items-center">
+            <img
+                :src="service.heroImage"
+                class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover"
+                alt=""
+                fetchpriority="high"
+                loading="eager"
+            />
+            <div class="overlay position-absolute top-0 start-0 w-100 h-100"></div>
             <div class="container position-relative">
                 <div class="row">
                     <div class="col-lg-8 text-white">
@@ -67,6 +75,7 @@ watch(
                 </div>
             </div>
         </section>
+
 
         <!-- CONTENUTO -->
         <div class="container my-5">
