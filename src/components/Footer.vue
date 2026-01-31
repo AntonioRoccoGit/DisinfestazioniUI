@@ -13,19 +13,8 @@ import { personalInfo } from '@/data/personalInfo';
                     <FooterLogo
                         alt="Logo"
                         style="width: 75%;"
-                        class="mb-3 m-auto"
+                        class="m-auto"
                     ></FooterLogo>
-                    <div class="d-flex justify-content-center justify-content-lg-even gap-3 mt-3">
-                        <a
-                            href="#"
-                            class="text-white fs-4"
-                        ><i class="bi bi-facebook"></i></a>
-                        <a
-                            href="https://www.instagram.com/alpha_range_/"
-                            target="_blank"
-                            class="text-white fs-4"
-                        ><i class="bi bi-instagram"></i></a>
-                    </div>
                 </div>
 
                 <!-- Sezione 2: Dove siamo -->
@@ -59,7 +48,21 @@ import { personalInfo } from '@/data/personalInfo';
                             >{{ personalInfo.cellulare }}
                             </a>
                         </li>
+                        <li>
+                            <div class="d-flex justify-content-center justify-content-lg-start gap-3 mt-3">
+                                <a
+                                    href="#"
+                                    class="text-white fs-4"
+                                ><i class="bi bi-facebook"></i></a>
+                                <a
+                                    href="https://www.instagram.com/alpha_range_/"
+                                    target="_blank"
+                                    class="text-white fs-4"
+                                ><i class="bi bi-instagram"></i></a>
+                            </div>
+                        </li>
                     </ul>
+
                 </div>
 
             </div>
