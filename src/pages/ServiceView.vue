@@ -20,11 +20,14 @@ function loadService() {
     }
 
     service.value = found
-    updateHead(found)
 }
 
-function updateHead(s) {
-    useHead({
+useHead(() => {
+    const s = service.value;
+
+    if (!s) return {};
+
+    return {
         title: s.metaTitle,
         meta: [
             { name: 'description', content: s.metaDescription },
@@ -35,8 +38,9 @@ function updateHead(s) {
             { rel: 'preload', as: 'image', href: s.heroImage },
             { rel: 'canonical', href: `https://www.alpharange.it/servizi/${s.slug}` }
         ]
-    })
-}
+    };
+});
+
 
 onMounted(loadService)
 

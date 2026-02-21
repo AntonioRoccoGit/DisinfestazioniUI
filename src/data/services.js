@@ -6,7 +6,7 @@ import ServiceVolatili from '@/components/serviceviews/ServiceVolatili.vue'
 import ServiceSanificazione from '@/components/serviceviews/ServiceSanificazione.vue'
 import ServiceTrattamentoLegno from '@/components/serviceviews/ServiceTrattamentoLegno.vue'
 import ServiceAziende from '@/components/serviceviews/ServiceAziende.vue'
-
+import { markRaw } from 'vue'
 export const services = [
     {
         slug: 'disinfestazione-insetti',
@@ -16,7 +16,7 @@ export const services = [
         heroImage: disinfestazione,
         metaTitle: 'Disinfestazione Insetti | Alpha Range',
         metaDescription: 'Servizi professionali di disinfestazione insetti per abitazioni e aziende.',
-        component: ServiceDisinfestazione
+        component: markRaw(ServiceDisinfestazione)
     },
     {
         slug: 'derattizzazione',
@@ -26,7 +26,7 @@ export const services = [
         heroImage: derattizzazioneImg,
         metaTitle: 'Derattizzazione | Alpha Range',
         metaDescription: 'Servizio professionale di derattizzazione.',
-        component: ServiceDerattizzazione
+        component: markRaw(ServiceDerattizzazione)
     },
     {
         slug: 'volatili',
@@ -36,7 +36,7 @@ export const services = [
         heroImage: derattizzazioneImg,
         metaTitle: 'Volatili | Alpha Range',
         metaDescription: 'Servizio professionale di allontanamento volatili.',
-        component: ServiceVolatili
+        component: markRaw(ServiceVolatili)
     },
     {
         slug: 'sanificazione',
@@ -46,7 +46,7 @@ export const services = [
         heroImage: derattizzazioneImg,
         metaTitle: 'Disinfezione & Sanificazione | Alpha Range',
         metaDescription: 'Servizio professionale di sanificazione.',
-        component: ServiceSanificazione
+        component: markRaw(ServiceSanificazione)
     },
     {
         slug: 'trattamenti-legno',
@@ -56,7 +56,7 @@ export const services = [
         heroImage: derattizzazioneImg,
         metaTitle: 'Trattamenti del Legno | Alpha Range',
         metaDescription: 'Servizio professionale di trattamento del legno.',
-        component: ServiceTrattamentoLegno
+        component: markRaw(ServiceTrattamentoLegno)
     },
     {
         slug: 'aziende',
@@ -66,6 +66,15 @@ export const services = [
         heroImage: derattizzazioneImg,
         metaTitle: 'Per le Aziende | Alpha Range',
         metaDescription: 'Servizio professionale di allontanamento volatili.',
-        component: ServiceAziende
+        component: markRaw(ServiceAziende)
     }
 ]
+
+export const servicesRoute = [
+    { label: 'Disinfestazione', route: '/servizi/disidisinfestazione-insettinfestazione' },
+    { label: 'Derattizzazione', route: '/servizi/derattizzazione' },
+    { label: 'Volatili', route: '/servizi/volatili' },
+    { label: 'Sanificazione', route: '/servizi/sanificazione' },
+    { label: 'Trattamenti del legno', route: '/servizi/trattamenti-legno' },
+    { label: 'Servizi per Aziende', route: '/servizi/aziende' }
+];
