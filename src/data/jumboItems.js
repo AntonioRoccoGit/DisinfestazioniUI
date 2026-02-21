@@ -1,11 +1,12 @@
 import img1 from '@/assets/carosello1.png'
 import img2 from '@/assets/carosello2.jpg'
+import { serviceImages } from './serviceImgs';
 
 export const jumboItems = [
     {
-        bgImage: img1
+        bgImage: serviceImages.disinfezioni
     },
     {
-        bgImage: img2
+        bgImage: serviceImages.derattizzazione
     }
 ];
