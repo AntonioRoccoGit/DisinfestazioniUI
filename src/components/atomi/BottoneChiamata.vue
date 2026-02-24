@@ -34,11 +34,10 @@
 
 <script setup>
 import { computed } from 'vue'
+import { personalInfo } from '@/data/personalInfo'
 
-const phoneNumber = '393331234567'
-
-const telLink = computed(() => `tel:+${phoneNumber}`)
-const whatsappLink = computed(() => `https://wa.me/${phoneNumber}`)
+const telLink = computed(() => `tel:+39${personalInfo.cellulare}`)
+const whatsappLink = computed(() => `https://wa.me/+39${personalInfo.cellulare}`)
 </script>
 
 <style scoped>
